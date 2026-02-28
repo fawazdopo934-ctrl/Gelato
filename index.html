@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Delights - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="loader"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Frozen Delights</div>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pages/produits.html">Produits</a></li>
+                <li><a href="pages/categories.html">Catégories</a></li>
+                <li><a href="pages/panier.html">Panier <span class="panier-count" style="display: none;">0</span></a></li>
+                <li><a href="pages/connexion.html">Connexion</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slider automatique -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/slide1.jpg')">
+                    <div class="slide-content">
+                        <h2>Découvrez nos glaces artisanales</h2>
+                        <p>Des saveurs uniques pour des moments glacés</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/slide2.jpg')">
+                    <div class="slide-content">
+                        <h2>Boissons fraîches et désaltérantes</h2>
+                        <p>Pour accompagner toutes vos envies</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/slide3.jpg')">
+                    <div class="slide-content">
+                        <h2>Sucreries et gourmandises</h2>
+                        <p>Le plaisir à portée de main</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégories principales -->
+        <h2 style="text-align: center; margin: 2rem 0;">Nos Catégories</h2>
+        <div class="categories-grid">
+            <div class="category-card frozen" onclick="window.location.href='pages/categories.html?cat=frozen'">
+                <div class="category-icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Produits Congelés</h3>
+                <p>Glaces, surgelés et plus encore</p>
+            </div>
+            <div class="category-card drinks" onclick="window.location.href='pages/categories.html?cat=drinks'">
+                <div class="category-icon"><i class="fas fa-wine-bottle"></i></div>
+                <h3>Boissons</h3>
+                <p>Sodas, jus, eaux</p>
+            </div>
+            <div class="category-card candy" onclick="window.location.href='pages/categories.html?cat=candy'">
+                <div class="category-icon"><i class="fas fa-candy-cane"></i></div>
+                <h3>Sucreries</h3>
+                <p>Bonbons, chocolats, confiseries</p>
+            </div>
+        </div>
+
+        <!-- Produits populaires -->
+        <h2 style="text-align: center; margin: 2rem 0;">Produits Populaires</h2>
+        <div class="products-grid" id="popular-products">
+            <!-- Rempli par JavaScript -->
+        </div>
+
+        <!-- Témoignages clients -->
+        <h2 style="text-align: center; margin: 2rem 0;">Ce que disent nos clients</h2>
+        <div class="testimonials-container">
+            <!-- Rempli par JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@frozendelights.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Gourmands, Paris</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos offres</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Votre email" style="padding: 0.5rem; border-radius: 5px; border: none;">
+                    <button type="submit" class="btn" style="margin-top: 0.5rem;">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Frozen Delights. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Chat widget -->
+    <div class="chat-widget">
+        <button class="chat-button">
+            <i class="fas fa-comment"></i>
+        </button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h4>Service Client</h4>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    Bonjour ! Comment puis-je vous aider ?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Votre message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/panier.js"></script>
+    <script src="js/produits.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Afficher les produits populaires sur la page d'accueil
+        document.addEventListener('DOMContentLoaded', () => {
+            const popularProducts = products.filter(p => p.badge === 'Populaire' || p.badge === 'Best-seller');
+            const container = document.getElementById('popular-products');
+            
+            if (container) {
+                let html = '';
+                popularProducts.slice(0, 4).forEach(produit => {
+                    html += `
+                        <div class="product-card">
+                            <img src="${produit.image}" alt="${produit.name}" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-title">${produit.name}</h3>
+                                <div class="product-price">${produit.price.toFixed(2)} €</div>
+                                <button class="btn" onclick="panier.ajouter(${JSON.stringify(produit).replace(/"/g, '&quot;')})">
+                                    <i class="fas fa-cart-plus"></i> Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+            }
+        });
+    </script>
+</body>
+</html> 

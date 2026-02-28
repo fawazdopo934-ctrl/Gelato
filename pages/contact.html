@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Delights - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div class="loader"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Frozen Delights</div>
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="categories.html">Catégories</a></li>
+                <li><a href="panier.html">Panier <span class="panier-count">0</span></a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container" style="max-width: 600px;">
+            <h2>Contactez-nous</h2>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Nom complet</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+
+            <!-- Google Maps intégration simulée -->
+            <div style="margin-top: 2rem; height: 300px; background: #f0f0f0; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--glacier-dark); margin-bottom: 1rem;"></i>
+                    <h3>Notre boutique</h3>
+                    <p>123 Rue des Gourmands<br>75001 Paris, France</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@frozendelights.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Gourmands, Paris</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Frozen Delights. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-button">
+            <i class="fas fa-comment"></i>
+        </button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h4>Service Client</h4>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    Bonjour ! Comment puis-je vous aider ?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Votre message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/panier.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

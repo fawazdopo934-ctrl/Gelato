@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Delights - Produits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div class="loader"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Frozen Delights</div>
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="categories.html">Catégories</a></li>
+                <li><a href="panier.html">Panier <span class="panier-count" style="display: none;">0</span></a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filters-section">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher un produit...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-options">
+                <select id="category-filter" class="filter-select">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="frozen">Produits Congelés</option>
+                    <option value="drinks">Boissons</option>
+                    <option value="candy">Sucreries</option>
+                </select>
+                <select id="sort-filter" class="filter-select">
+                    <option value="default">Trier par</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="name-asc">Nom A-Z</option>
+                </select>
+                <input type="range" id="price-filter" min="0" max="10" step="0.5" value="10" class="filter-select">
+                <span id="price-value">Prix max: 10€</span>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-container">
+            <!-- Rempli par JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@frozendelights.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Gourmands, Paris</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Frozen Delights. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-button">
+            <i class="fas fa-comment"></i>
+        </button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h4>Service Client</h4>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    Bonjour ! Comment puis-je vous aider ?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Votre message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/panier.js"></script>
+    <script src="../js/produits.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

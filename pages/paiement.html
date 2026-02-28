@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Delights - Paiement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div class="loader"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">Frozen Delights</div>
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="categories.html">Catégories</a></li>
+                <li><a href="panier.html">Panier <span class="panier-count">0</span></a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Paiement</h2>
+            
+            <div class="order-summary">
+                <h3>Récapitulatif de la commande</h3>
+                <div id="order-items"></div>
+                <div class="total" id="order-total"></div>
+            </div>
+
+            <h3>Mode de paiement</h3>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile Money</h4>
+                    <p>Paiement via mobile</p>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-truck"></i>
+                    <h4>Paiement à la livraison</h4>
+                    <p>Payez à la réception</p>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary pay-button" style="margin-top: 2rem;">
+                Confirmer le paiement
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@frozendelights.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Gourmands, Paris</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Frozen Delights. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-button">
+            <i class="fas fa-comment"></i>
+        </button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h4>Service Client</h4>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    Bonjour ! Comment puis-je vous aider ?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Votre message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/panier.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderItems = document.getElementById('order-items');
+            const orderTotal = document.getElementById('order-total');
+            
+            if (panier.items.length > 0) {
+                let html = '<ul>';
+                panier.items.forEach(item => {
+                    html += `<li>${item.name} x${item.quantite} - ${(item.price * item.quantite).toFixed(2)} €</li>`;
+                });
+                html += '</ul>';
+                orderItems.innerHTML = html;
+                orderTotal.innerHTML = `Total: ${panier.calculerTotal().toFixed(2)} €`;
+            } else {
+                orderItems.innerHTML = '<p>Votre panier est vide</p>';
+            }
+        });
+    </script>
+</body>
+</html>
